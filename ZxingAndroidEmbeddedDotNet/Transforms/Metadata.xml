@@ -1,0 +1,52 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+
+	<!--https://stackoverflow.com/a/43882710/4399386-->
+	<remove-node path="/api/package[@name='com.journeyapps.barcodescanner.camera']/class[@name='CameraThread']" />
+	<remove-node path="/api/package[@name='com.google.zxing.oned.rss.expanded.decoders']/class[@name='AbstractExpandedDecoder']" />
+
+	<add-node path="/api/package[@name='com.journeyapps.barcodescanner']">
+		<class abstract="false" deprecated="not deprecated" final="false" name="ScanContract" static="false" visibility="public" extends="java.lang.Object">
+		</class>
+		<class abstract="false" deprecated="not deprecated" final="false" name="Size" static="true" visibility="public" extends="java.lang.Object"/>
+	</add-node>
+
+	<add-node path="/api/package[@name='com.google.zxing.client.result']">
+		<class abstract="true" deprecated="not deprecated" final="false" name="AddressBookAUResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="AddressBookDoCoMoResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="BizcardResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="BookmarkDoCoMoResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="EmailAddressResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="EmailDoCoMoResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="ExpandedProductResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="GeoResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="ISBNResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="ProductResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="SMSMMSResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="SMSTOMMSTOResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="SMTPResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="TelResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="URIResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="URLTOResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="VCardResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="VEventResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="VINResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+		<class abstract="true" deprecated="not deprecated" final="false" name="WifiResultParser" static="false" visibility="public" extends="java.lang.Object"/>
+	</add-node>
+
+	<!--<attr path="/api/package[@name='com.journeyapps.barcodescanner']/class[@name='BarcodeEncoder']/method[@name='encodeBitmap' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='com.google.zxing.BarcodeFormat']]" name="visibility">public</attr>-->
+	<!--<attr path="/api/package[@name='com.google.zxing']/class[@name='BarcodeFormat']" name="name">BarcodeFormat</attr>
+	<add-node path="/api/package[@name='com.google.zxing']">
+		<class abstract="true" deprecated="not deprecated" final="false" name="LuminanceSource" static="true" visibility="public" extends="java.lang.Object"/>
+	</add-node>
+	<add-node path="/api/package[@name='com.google.zxing.aztec.decoder']">
+		<class abstract="false" deprecated="not deprecated" final="true" name="Decoder" static="true" visibility="public" extends="java.lang.Object"/>
+	</add-node>-->
+</metadata>
